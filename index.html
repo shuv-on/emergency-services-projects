@@ -52,7 +52,7 @@
              </div>
          </div>
          <!-- Hotlines -->
-          <div class="p-6 m-5">
+          <div class="p-4 m-3">
           <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-4">
                 <div class="grid grid-cols-1 md:col-span-3 md:row-span-3 md:grid-cols-3 md:grid-rows-3 gap-4">
                     <!-- National Emergency Number -->
@@ -311,8 +311,15 @@
                     
                  </div> <!-- End 3x3 Boxes -->
             <!-- Call History -->
-                <div class="bg-white rounded-xl p-4 flex flex-col order-2 md:col-span-1 md:row-span-3">
-                    <h2 class="text-xl font-semibold mb-2">Call History</h2>
+                <div class="bg-white rounded-xl p-4 flex flex-col order-2 md:col-span-1 md:row-span-3 ">
+                    <div class="flex justify-between items-center">
+                        <h2 class=" mb-2"><i class="fa-solid fa-clock-rotate-left"></i>Call History</h2>
+                        <button id="btn-clear" class="btn btn-success text-white  h-8 rounded-2xl">Clear</button>
+                    </div>
+                    <div class="m-3 border-2 border-gray-200 rounded-xl">
+                        <p class="text-center text-gray-400">No calls yet. Your calls will appear here.</p>
+                    </div>
+                    
                 </div>
 
             </div>
