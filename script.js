@@ -1,9 +1,9 @@
 //Increment hearts
 const hearts = document.querySelectorAll(".heart-icon");
 const life = document.getElementById("life-inc");
-hearts.forEach(function(heart){
-    heart.addEventListener("click", function(){
-        life.textContent = parseInt(life.textContent)+1;
+hearts.forEach(function (heart) {
+    heart.addEventListener("click", function () {
+        life.textContent = parseInt(life.textContent) + 1;
     });
 });
 
@@ -19,7 +19,7 @@ let coinCount = parseInt(coinCountElement.textContent);
 
 //Call buttons functionality
 callButtons.forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
         // Get service details
         const card = button.closest('.bg-white');
         const serviceName = card.querySelector('h2').textContent;
@@ -45,7 +45,7 @@ callButtons.forEach(button => {
         //Remove no calls msg 
         noCallsMessage.style.display = 'none';
 
-        
+
 
         //Call History
         const historyItem = document.createElement('div');
@@ -63,8 +63,25 @@ callButtons.forEach(button => {
 });
 
 // Clear history button functionality
-clearButton.addEventListener('click', function() {
+clearButton.addEventListener('click', function () {
     historyList.innerHTML = '';
     historyList.appendChild(noCallsMessage);
     noCallsMessage.style.display = 'block';
+});
+
+
+
+//Copy buton functionality
+document.addEventListener("DOMContentLoaded", function () {
+    const copyButtons = document.querySelectorAll('.btn-copy');
+    const copyCount = document.getElementById('copy-menu');
+
+    copyButtons.forEach(function (button) {
+        button.addEventListener("click", function () {
+            let current = parseInt(copyCount.textContent);
+            copyCount.textContent = current + 1;
+
+           
+        });
+    });
 });
