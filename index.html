@@ -8,6 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" /> 
     <!--Tailwind CSS-->
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <!-- Font awesome cdn -->
+       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header>
@@ -39,7 +41,7 @@
            
         </div>
     </header>
-    <main>
+    <main class="bg-[#41FF6B]/10 ">
         <!-- Banner add  -->
          <div class="mx-auto w-full mt-7 h-[20rem] md:h-[20rem] bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col justify-center items-center ">
             <!-- Banner elements -->
@@ -49,6 +51,58 @@
                 <p class="text-white  text-sm text-center md:text-left md:whitespace-nowrap overflow-hidden text-ellipsis max-w-full">Government Emergency Services at Your Fingertip - A Project by  Government of the People’s Republic of Bangladesh</p>
              </div>
          </div>
+         <!-- Hotlines -->
+          <div class="p-6 m-5">
+          <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-3 gap-4">
+                <div class="grid grid-cols-1 md:col-span-3 md:row-span-3 md:grid-cols-3 md:grid-rows-3 gap-4">
+                    <!-- National Emergency Number -->
+                    <div class="bg-white rounded-xl flex flex-col items-center justify-between ">
+                        <!-- Emergency Logo and heart -->
+                        <div class="flex flex-row items-center justify-between w-full p-5 ">
+                            <div class="bg-[#FFE3E2] rounded-xl w-[4rem] h-[4rem] flex justify-center items-center">
+                            <img src="./assets/emergency.png" class="w-[2rem] ">
+                        </div>
+                             <i class="fa-regular fa-heart"></i>
+                        </div>
+
+                        <div class="self-start ml-5 ">
+                            <!-- Hotline details -->
+                            <div>
+                            <h2 class="font-semibold">National Emergency Number</h2>
+                            <p class="text-gray-400 text-sm">National Emergency</p> <br>
+                            <h1 class="font-bold text-3xl">999</h1>
+                            <p class="text-gray-500 bg-gray-200 rounded-2xl text-center w-[3rem] h-[2rem]  flex justify-center items-center">All</p>
+
+                        </div>
+                        <!-- Copy and Call -->
+                        <div></div>
+                        </div>
+
+                    </div>
+                    <!-- Police Helpline Number -->
+                    <div class="bg-white rounded-xl flex items-center justify-center h-20">2</div>
+                    <!-- Fire Service Number -->
+                    <div class="bg-white rounded-xl flex items-center justify-center h-20">3</div>
+                    <!-- Ambulance Service Number -->
+                    <div class="bg-white rounded-xl flex items-center justify-center h-20">4</div>
+                    <!-- Women & Child Helpline -->
+                    <div class="bg-white rounded-xl flex items-center justify-center h-20">5</div>
+                    <!-- Anti-Corruption Helpline -->
+                    <div class="bg-white rounded-xl flex items-center justify-center h-20">6</div>
+                    <!-- Electricity Helpline -->
+                    <div class="bg-white rounded-xl flex items-center justify-center h-20">7</div>
+                    <!-- Brac Helpline -->
+                    <div class="bg-white rounded-xl flex items-center justify-center h-20">8</div>
+                    <!-- Bangladesh Railway Helpline -->
+                    <div class="bg-white rounded-xl flex items-center justify-center h-20">9</div>
+                 </div>
+            <!-- Call History -->
+                <div class="bg-white rounded-xl p-4 flex flex-col order-2 md:col-span-1 md:row-span-3">
+                    <h2 class="text-xl font-semibold mb-2">Call History</h2>
+                </div>
+
+            </div>
+        </div>
     </main>
 </body>
 </html>
