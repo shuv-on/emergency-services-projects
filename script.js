@@ -75,13 +75,21 @@ clearButton.addEventListener('click', function () {
 document.addEventListener("DOMContentLoaded", function () {
     const copyButtons = document.querySelectorAll('.btn-copy');
     const copyCount = document.getElementById('copy-menu');
-
     copyButtons.forEach(function (button) {
         button.addEventListener("click", function () {
-            let current = parseInt(copyCount.textContent);
-            copyCount.textContent = current + 1;
-
-           
+            // Get the phone number 
+            const phoneNumber = button.closest('.bg-white').querySelector('h1.font-bold.text-3xl').textContent;
+            // Copy the phone number to the clipboard
+            navigator.clipboard.writeText(phoneNumber).then(() => {
+                // Show alert 
+                alert(`Copied ${phoneNumber} to clipboard`);
+                // Inc copu 
+                let current = parseInt(copyCount.textContent);
+                copyCount.textContent = current + 1;
+            }).catch(err => {
+                console.error('Failed to copy: ', err);
+                alert('Failed to copy the number.');
+            });
         });
     });
 });
