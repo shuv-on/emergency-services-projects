@@ -14,6 +14,7 @@ const historyList = document.querySelector('.history-list');
 const noCallsMessage = document.getElementById('no-calls');
 const clearButton = document.getElementById('btn-clear');
 
+
 let coinCount = parseInt(coinCountElement.textContent);
 
 //Call buttons functionality
@@ -30,6 +31,10 @@ callButtons.forEach(button => {
             return;
         }
 
+        //Time update
+        const now = new Date();
+        const timestamp = now.toLocaleTimeString();
+
         // Show alert
         alert(`Calling ${serviceName} at ${serviceNumber}`);
 
@@ -40,12 +45,18 @@ callButtons.forEach(button => {
         //Remove no calls msg 
         noCallsMessage.style.display = 'none';
 
+        
+
         //Call History
         const historyItem = document.createElement('div');
-        historyItem.classList.add('p-2', 'border-b', 'border-gray-200');
+        historyItem.classList.add('p-2', 'border-b', 'border-gray-200', 'flex', 'justify-between', 'items-center');
         historyItem.innerHTML = `
-            <p class="font-semibold">${serviceName}</p>
-            <p class="text-gray-500">${serviceNumber}</p>
+            <div>
+                <p class="font-semibold">${serviceName}</p>
+                <p class="text-gray-500">${serviceNumber}</p>
+            </div>
+            <p class="text-gray-500">${timestamp}</p>
+            
         `;
         historyList.appendChild(historyItem);
     });
@@ -53,5 +64,7 @@ callButtons.forEach(button => {
 
 // Clear history button functionality
 clearButton.addEventListener('click', function() {
-    historyList.innerHTML = '<p id="no-calls" class="text-center text-gray-400">No calls yet. Your calls will appear here.</p>';
+    historyList.innerHTML = '';
+    historyList.appendChild(noCallsMessage);
+    noCallsMessage.style.display = 'block';
 });
